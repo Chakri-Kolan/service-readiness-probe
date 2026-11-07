@@ -1,0 +1,17 @@
+{
+  "targets": [
+    {
+      "name": "local-api",
+      "url": "http://127.0.0.1:8080/health",
+      "expected_status": 200,
+      "timeout_ms": 2000,
+      "max_latency_ms": 500,
+      "retries": 2,
+      "backoff_ms": 100,
+      "body_contains": "ready",
+      "required_headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  ]
+}
